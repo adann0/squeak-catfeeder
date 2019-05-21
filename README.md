@@ -4,6 +4,9 @@
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
 </p>
 
+    $ pinout
+    $ sudo pigpiod
+
 # Sources :
 
   - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
