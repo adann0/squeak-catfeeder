@@ -1,5 +1,7 @@
 # squeak-catfeeder
 
+<img>http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg</img>
+
 # Sources :
 
   - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
