@@ -10,6 +10,7 @@
 # Sources :
 
   - Seaside : http://seaside.st/
+  - Pharo + Docker : https://www.clever-cloud.com/blog/guests/2015/01/05/smalltalk-in-the-cloud/
   - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
   - Alternative : 
       - https://www.framboise314.fr/wp-content/uploads/2017/11/05_01_servomoteur.pdf
