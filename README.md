@@ -7,5 +7,7 @@
   - Pour des prototypes : 
       - https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
       - https://www.raspberrypi.org/documentation/usage/gpio/scratch1/README.md
+  - SqueakMap :
+      - http://www.squeaksource.com/NuScratch/
   - https://github.com/JumpIntoSqueak/squeak-docker
   - https://en.scratch-wiki.info/wiki/Squeak_Tutorial
