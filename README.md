@@ -1,6 +1,8 @@
 # squeak-catfeeder
 
-![alt text](http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg)
+<p align="center">
+  <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
+</p>
 
 # Sources :
 
