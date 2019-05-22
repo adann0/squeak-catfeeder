@@ -19,6 +19,7 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
 
   - Seaside : http://seaside.st/
   - Pharo + Docker : https://www.clever-cloud.com/blog/guests/2015/01/05/smalltalk-in-the-cloud/
+  - GPIO + Docker : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
   - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
   - Alternative : 
       - https://www.framboise314.fr/wp-content/uploads/2017/11/05_01_servomoteur.pdf
