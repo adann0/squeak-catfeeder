@@ -5,6 +5,7 @@ $ sudo ./pwm <pin> <seconds>
 
 #include <stdio.h>
 #include <pigpio.h>
+#include <stdlib.h>
 
 void usage(char * msg) { fprintf(stderr, "%s\n", msg) ; exit(1) ; }
 
@@ -24,8 +25,13 @@ int main(int argc, char *argv[]) {
    if (gpioInitialise() < 0) {
       usage("pigpio initialisation failed") ;
    }
+
+   char *ptr;
    
-   rotate(argv[1], argv[2]);
+   int pin = strtol(argv[1], &ptr, 10);
+   int seconds = strtol(argv[2], &ptr, 10);
+   
+   rotate(pin, seconds);
    
    return 0;
 }
