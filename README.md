@@ -1,6 +1,6 @@
 # squeak-catfeeder
 
-Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement à manger au chat à distance, et une image Docker pour déployer facilement le projet sur un Raspberry Pi.
+Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement à manger au chat à distance, et une image Docker pour déployer facilement le projet sur un Raspberry Pi. 
 
 <p align="center">
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
@@ -13,7 +13,7 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
 
     $ docker run --device /dev/gpiomem -p 8080:8080 -d adann0/squeak-catfeeder:latest
 
-L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN 17 devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être configuré sur le site. Par sécurité, cliquer sur la photo plus d'une fois par heure ne distrubuera pas plus de croquettes.
+L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN 17 devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être configuré sur le site, comme la sécurité (ne permettre qu'une fois la distribution par heure malgré le nombre répété de click sur le site par exemple...).
 
 # Sources :
 
