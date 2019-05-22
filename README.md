@@ -1,5 +1,7 @@
 # squeak-catfeeder
 
+Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement à manger au chat à distance, et une image Docker pour déployer facilement le projet sur un Raspberry Pi.
+
 <p align="center">
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
 </p>
