@@ -13,7 +13,7 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
 
     $ docker run --device /dev/gpiomem -p 8080:8080 -d adann0/squeak-catfeeder:latest
 
-L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN 17 devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être configuré sur le site, comme la sécurité (ne permettre qu'une fois la distribution par heure malgré le nombre répété de click sur le site par exemple...).
+L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN spécifié sur la page "Settings" devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être ajusté, comme une sécurité (ne permettre qu'un certain nombre de fois la distribution par heure malgré le nombre répété de click sur le site).
 
 # Sources :
 
