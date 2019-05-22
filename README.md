@@ -9,6 +9,12 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
     $ pinout
     $ sudo pigpiod
 
+## Docker Image
+
+    $ docker run --device /dev/gpiomem -p 8080:8080 -d adann0/squeak-catfeeder:latest
+
+L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN 17 devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être configuré sur le site. Par sécurité, cliquer sur la photo plus d'une fois par heure ne distrubuera pas plus de croquettes.
+
 # Sources :
 
   - Seaside : http://seaside.st/
