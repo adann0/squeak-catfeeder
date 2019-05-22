@@ -14,6 +14,7 @@
   - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
   - Alternative : 
       - https://www.framboise314.fr/wp-content/uploads/2017/11/05_01_servomoteur.pdf
+      - https://blog.adafruit.com/2018/11/26/sysfs-is-dead-long-live-libgpiod-libgpiod-for-linux-circuitpython/
       - Voir avec Sysfs+FileStream ou FFI
   - Pour des prototypes : 
       - https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
