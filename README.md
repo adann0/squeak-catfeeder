@@ -15,7 +15,7 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
 
 L'interface web devrait être accessible à http://ip:8080, en cliquant sur la photo du chat le Cervo branché sur le PIN spécifié sur la page "Settings" devrait se mettre à tourner et distribuer des croquettes. Le nombre de pulsations peut-être ajusté, comme une sécurité (ne permettre qu'un certain nombre de fois la distribution par heure malgré le nombre répété de click sur le site).
 
-3 classes, CatFeeder-FFI, CatFeeder-Tools, CatFeeder-Core
+3 classes, CatFeeder-FFI, CatFeeder-Tools, CatFeeder-Core, (CatFeeder-Web?)
 
 # Sources :
 
