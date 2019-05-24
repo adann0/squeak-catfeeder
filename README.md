@@ -26,7 +26,7 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
     - Compatibilité GPIO-Squeak : 
       - Des soucis avec "RaspberryPi GPIO" (dernière version de 2017) et Squeak 5.4 
       - https://blog.adafruit.com/2018/11/26/sysfs-is-dead-long-live-libgpiod-libgpiod-for-linux-circuitpython/
-      - Du coup il faut faire quelque chose du genre FFI+pigpio
+      - Du coup il faudrait faire quelque chose du genre FFI+pigpio (une des librairies natives installés sur Raspbian)
       
     - Prototypes/fonctions : 
       - https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
