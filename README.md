@@ -24,7 +24,7 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
   - Alternative : 
       - https://www.framboise314.fr/wp-content/uploads/2017/11/05_01_servomoteur.pdf
       - https://blog.adafruit.com/2018/11/26/sysfs-is-dead-long-live-libgpiod-libgpiod-for-linux-circuitpython/
-      - Voir avec Sysfs+FileStream ou FFI
+      - Voir avec Sysfs+FileStream ou FFI+libgpiod
   - Pour des prototypes : 
       - https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
       - https://www.raspberrypi.org/documentation/usage/gpio/scratch1/README.md
