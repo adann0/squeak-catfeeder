@@ -9,6 +9,7 @@ RUN wget http://abyz.me.uk/rpi/pigpio/pigpio.tar \
   && make install \
   && cd .. \
   && rm -rf PIGPIO
-  
-EXPOSE 8080
 
+COPY ./share /squeak/share
+
+EXPOSE 8080
