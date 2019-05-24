@@ -17,19 +17,16 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
 
 # Sources :
 
+  - PiGPIO : https://github.com/joan2937/pigpio
   - Seaside : http://seaside.st/
-  - Pharo + Docker : https://www.clever-cloud.com/blog/guests/2015/01/05/smalltalk-in-the-cloud/
-  - GPIO + Docker : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
-  - NuScratch Installation in Squeak 5.x : http://wiki.squeak.org/squeak/1263
-  - Alternative : 
-      - https://www.framboise314.fr/wp-content/uploads/2017/11/05_01_servomoteur.pdf
+  - Pharo-VNC-Supervisor : https://github.com/mumez/pharo-vnc-supervisor
+  
+  - Questions/Recherches :
+    - Accès GPIO via Docker (SOF) : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
+    - Compatibilité GPIO-Squeak : 
       - https://blog.adafruit.com/2018/11/26/sysfs-is-dead-long-live-libgpiod-libgpiod-for-linux-circuitpython/
       - Voir avec Sysfs+FileStream ou FFI+libgpiod
-  - Pour des prototypes : 
+    - Prototypes/fonctions : 
       - https://www.raspberrypi.org/documentation/usage/gpio/python/README.md
       - https://www.raspberrypi.org/documentation/usage/gpio/scratch1/README.md
       - https://elinux.org/RPi_GPIO_Code_Samples
-  - SqueakMap :
-      - http://www.squeaksource.com/NuScratch/
-  - https://github.com/JumpIntoSqueak/squeak-docker
-  - https://en.scratch-wiki.info/wiki/Squeak_Tutorial
