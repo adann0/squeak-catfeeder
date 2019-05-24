@@ -19,8 +19,9 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
 
 # Sources :
 
-  - PiGPIO : https://github.com/joan2937/pigpio
   - Seaside : http://seaside.st/
+  - Monticello : http://book.seaside.st/book/getting-started/pharo/monticello
+  - PiGPIO : https://github.com/joan2937/pigpio
   - Pharo-VNC-Supervisor : https://github.com/mumez/pharo-vnc-supervisor
   
   - Questions/Recherches :
