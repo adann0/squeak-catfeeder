@@ -24,7 +24,7 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
   - Questions/Recherches :
     - Accès GPIO via Docker (SOF) : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
     - Compatibilité GPIO-Squeak : 
-      - Des soucis avec "RaspberryPi GPIO" (dernière version de 2017) et Squeak 5.4 
+      - Des soucis avec le package SqueakMap "RaspberryPi GPIO" (dernière version de 2017) et Squeak 5.4 
       - https://blog.adafruit.com/2018/11/26/sysfs-is-dead-long-live-libgpiod-libgpiod-for-linux-circuitpython/
       - Du coup il faudrait faire quelque chose du genre FFI+pigpio (une des librairies natives installés sur Raspbian)
       
