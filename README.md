@@ -17,6 +17,10 @@ L'interface web devrait être accessible à http://ip:8080, en cliquant sur la p
 
 3 classes, CatFeeder-FFI, CatFeeder-Tools, CatFeeder-Core, (CatFeeder-Web?)
 
+## Developpement du Projet
+
+
+
 # Sources :
 
   - Seaside : http://seaside.st/
