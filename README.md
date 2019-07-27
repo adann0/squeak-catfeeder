@@ -13,7 +13,7 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
 
     $ docker run --device /dev/gpiomem -p 8080:8080 -d adann0/squeak-catfeeder:latest
 
-L'interface web devrait être accessible à http://ip:3131. Une icone est visible pour donner à manger au chat, et un live-stream pour vérifier que le bol ai bien été rempli.
+L'interface web devrait être accessible à http://ip:3131. Une icone est visible pour donner à manger au chat, et un live-stream pour vérifier que le bol ait bien été rempli.
 
 3 classes, CatFeeder-FFI, CatFeeder-Tools, CatFeeder-Core, (CatFeeder-Web?)
 
