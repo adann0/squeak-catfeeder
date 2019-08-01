@@ -20,7 +20,7 @@ L'interface web devrait être accessible à http://ip:9999. Une icone est visibl
 
 Lorsque l'on click sur "Feed" sur l'interface web, le servo tourne, et lorsque Squeak appel la fonction gpioStop(), la VM plante. Pourtant j'ai testé la fonction gpioStop() qui ne pose aucun problème lorsque la méthode est appelé autrement que par un click sur la page web, et j'ai testé le click sur la page web sur une methode renvoyant quelque chose d'autre et ça ne fait pas planter la VM... J'ai au début pensé que c'était à cause d'un upgrade sur Seaside, mais en faisant un serveur web classique sur Squeak, le bug était toujours là... Et ma version de Squeak est la même que lorsque ça fonctionnait. Deux solutions, pigpio qui a peut-être changé quelque chose, ou Raspbian.
 
-Docker relance la VM si celle-ci plante, et comme feeder par le web n'est la que en dernier recours je ne mettrais pas plus de temps sur ce bug je pense... On verra sur Docker si le bug est toujours la. Il reste le push button a faire et la caméra (je pensais a tord que je pourrais exploiter le gpio sur la caméra mais c'est un autre port qui est utilisé)
+Docker relance la VM si celle-ci plante, et comme feeder par le web n'est la que en dernier recours je ne mettrais pas plus de temps sur ce bug je pense... On verra sur Docker si le bug est toujours la. Il reste le push button a faire et la caméra (je pensais a tord que je pourrais faire des ptit trucs sur Squeak avec la caméra mais elle n'utilise par les pin gpio...)
 
 ## Plus de détails
 
