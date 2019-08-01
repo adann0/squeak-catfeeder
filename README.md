@@ -77,6 +77,7 @@ Next I made a small webserver, I was using Seaside, but It crash when I click on
   - C Library for PiCamera : https://raspberrypi.stackexchange.com/questions/55140/library-to-allow-use-of-pi-camera-in-projects
   - Pharo-VNC-Supervisor : https://github.com/mumez/pharo-vnc-supervisor
   - Seaside Introduction : https://www.youtube.com/watch?v=9pdJxubR8yE&list=PLE08F4511BC5E3A91
+  - Raspberry Camera Live Stream : https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/
   - Questions/Recherches :
     - Accès GPIO via Docker (SOF) : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
     - Compatibilité GPIO-Squeak : 
