@@ -6,65 +6,21 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
 </p>
 
+Pour voir les différents PIN du GPIO sur le Raspberry :
+
     $ pinout
-    $ sudo pigpiod
 
 ## Docker Image
 
-    $ docker run --device /dev/gpiomem -p 8080:8080 -d adann0/squeak-catfeeder:latest
+    $ docker run --device /dev/gpiomem -p 9999:9999 -d adann0/squeak-catfeeder:latest
 
-L'interface web devrait être accessible à http://ip:3131. Une icone est visible pour donner à manger au chat, et un live-stream pour vérifier que le bol ait bien été rempli.
+L'interface web devrait être accessible à http://ip:9999. Une icone est visible pour donner à manger, et un live-stream pour vérifier que le bol ait bien été rempli. Un push button est aussi à disposition du chat pour qu'il remplisse le bol lui même (si il apprend a le faire).
 
-## How to recreate the Squeak CatFeeder
+## Le Bug du Crash de la VM
 
-You'll need at least a fresh image of Squeak 5.2b on a Raspberry Pi with a GPIO Interface (pigpiod is the native deamon for Raspberry GPIO), with FFI installed from SqueakMap.
+Lorsque l'on click sur "Feed" sur l'interface web, le servo tourne, et lorsque Squeak appel la fonction gpioStop(), la VM plante. Pourtant j'ai testé la fonction gpioStop() qui ne pose aucun problème lorsque la méthode est appelé autrement que par un click sur la page web, et j'ai testé le click sur la page web sur une methode renvoyant quelque chose d'autre et ça ne fait pas planter la VM... J'ai au début pensé que c'était à cause d'un upgrade sur Seaside, mais en faisant un serveur web classique sur Squeak, le bug était toujours là... Et ma version de Squeak est la même que lorsque ça fonctionnait. Deux solutions, pigpio qui a peut-être changé quelque chose, ou Raspbian.
 
-I use FFI to import some functions from pigpio.h instead of using RaspberryPiGPIO from SqueakMap Catalog, that doesn't work for me ; so whatever it will be a more light image, and I have to use FFI so it's a good deal.
-
-So I made these few methods :
-
-    gpioInitialise
-      <cdecl: long 'gpioInitialise' (void) module:  '/usr/lib/libpigpio.so' >
-      ^self externalCallFailed
-
-    gpioSetMode: c1 with: c2
-      <cdecl: long 'gpioSetMode' (long long) module:  '/usr/lib/libpigpio.so' >
-      ^self externalCallFailed
-	
-    gpioPWM: c1 with: c2
-      <cdecl: long 'gpioPWM' (long long) module:  '/usr/lib/libpigpio.so' >
-      ^self externalCallFailed
-
-    gpioTerminate
-      <cdecl: void 'gpioTerminate' (void) module:  '/usr/lib/libpigpio.so' >
-      ^self externalCallFailed
-
-    sleep: anInteger
-      anInteger seconds asDelay wait.
-
-
-And I call them all in a last method like this :
-
-    feed:pin with:sec
-      <subclass_name> new gpioInitialise;
-      gpioSetMode:pin with:1;
-      gpioPWM:pin with:192;
-      sleep:sec;
-      gpioTerminate.
-
-Next I made a small webserver, I was using Seaside, but It crash when I click on the page at "gpioTerminate" so... I switch to a simple WebServer that just provide a livestream and a redirection when the page "/feed" is visited to feed the cat.
-
-    (WebServer reset default)
-      listenOn: 9999.
-		
-    WebServer default addService: '/' action:[:req|
-      req send200Response: 'CatFeeder'.
-    ].
-
-    WebServer default addService: '/feed' action:[:req|
-      FFI new feed.
-      req send302Response: '/'. "redirect"
-    ].
+Docker relance la VM si celle-ci plante, et comme feeder par le web n'est la que en dernier recours je ne mettrais pas plus de temps sur ce bug je pense... On verra sur Docker si le bug est toujours la. Il reste le push button a faire et la caméra (je pensais a tord que je pourrais exploiter le gpio sur la caméra mais c'est un autre port qui est utilisé)
 
 ## Plus de détails
 
