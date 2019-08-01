@@ -15,7 +15,56 @@ Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement 
 
 L'interface web devrait être accessible à http://ip:3131. Une icone est visible pour donner à manger au chat, et un live-stream pour vérifier que le bol ait bien été rempli.
 
-3 classes, CatFeeder-FFI, CatFeeder-Tools, CatFeeder-Core, (CatFeeder-Web?)
+## How to recreate the Squeak CatFeeder
+
+You'll need at least a fresh image of Squeak 5.2b on a Raspberry Pi with a GPIO Interface (pigpiod is the native deamon for Raspberry GPIO), with FFI installed from SqueakMap.
+
+I use FFI to import some functions from pigpio.h instead of using RaspberryPiGPIO from SqueakMap Catalog, that doesn't work for me ; so whatever it will be a more light image, and I have to use FFI so it's a good deal.
+
+So I made these few methods :
+
+    gpioInitialise
+      <cdecl: long 'gpioInitialise' (void) module:  '/usr/lib/libpigpio.so' >
+      ^self externalCallFailed
+
+    gpioSetMode: c1 with: c2
+      <cdecl: long 'gpioSetMode' (long long) module:  '/usr/lib/libpigpio.so' >
+      ^self externalCallFailed
+	
+    gpioPWM: c1 with: c2
+      <cdecl: long 'gpioPWM' (long long) module:  '/usr/lib/libpigpio.so' >
+      ^self externalCallFailed
+
+    gpioTerminate
+      <cdecl: void 'gpioTerminate' (void) module:  '/usr/lib/libpigpio.so' >
+      ^self externalCallFailed
+
+    sleep: anInteger
+      anInteger seconds asDelay wait.
+
+
+And I call them all in a last method like this :
+
+    feed:pin with:sec
+      <subclass_name> new gpioInitialise;
+      gpioSetMode:pin with:1;
+      gpioPWM:pin with:192;
+      sleep:sec;
+      gpioTerminate.
+
+Next I made a small webserver, I was using Seaside, but It crash when I click on the page at "gpioTerminate" so... I switch to a simple WebServer that just provide a livestream and a redirection when the page "/feed" is visited to feed the cat.
+
+    (WebServer reset default)
+      listenOn: 9999.
+		
+    WebServer default addService: '/' action:[:req|
+      req send200Response: 'CatFeeder'.
+    ].
+
+    WebServer default addService: '/feed' action:[:req|
+      FFI new feed.
+      req send302Response: '/'. "redirect"
+    ].
 
 ## Plus de détails
 
