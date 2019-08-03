@@ -15,5 +15,5 @@ def rotate(pin, sleep) :
     pi.stop()
 
 if __name__ == "__main__" :
-    if len(sys.argv) < 3 : usage("USAGE: ./pwm <pin> <seconds>")
+    if len(sys.argv) < 3 : usage("USAGE: ./servo <pin> <seconds>")
     rotate(int(sys.argv[1]), int(sys.argv[2]))
