@@ -1,6 +1,6 @@
 /*
-$ gcc -o pwm pwm.c -lpigpio -lrt -lpthread
-$ sudo ./pwm <pin> <seconds>
+$ gcc -o servo servo.c -lpigpio -lrt -lpthread
+$ sudo ./servo <pin> <seconds>
 */
 
 #include <stdio.h>
@@ -27,7 +27,7 @@ int rotate(int pin, int sleep) {
 int main(int argc, char *argv[]) {
 
    if (argc < 3) {
-       usage("USAGE: ./pwm <pin> <seconds>") ;
+       usage("USAGE: ./servo <pin> <seconds>") ;
    }
 
    char *ptr;
