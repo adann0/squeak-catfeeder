@@ -22,6 +22,8 @@ Lorsque l'on click sur "Feed" sur l'interface web, le servo tourne, et lorsque S
 
 Docker relance la VM si celle-ci plante, et comme feeder par le web n'est la que en dernier recours je ne mettrais pas plus de temps sur ce bug je pense... On verra sur Docker si le bug est toujours la. Il reste le push button a faire et la caméra (je pensais a tord que je pourrais faire des ptit trucs sur Squeak avec la caméra mais elle n'utilise par les pin gpio...)
 
+Voici une vidéo ou j'explique comment retrouver ce bug en partant de la VM backup du projet : (a faire)
+
 ## Plus de détails
 
 
