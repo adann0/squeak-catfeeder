@@ -1,6 +1,6 @@
 # squeak-catfeeder
 
-Un "CatFeeder" en Squeak, avec une interface web pour pouvoir donner facilement à manger au chat à distance, une caméra pour vérifier que la nourriture ait été distribuée, et une image Docker pour déployer rapidement le projet sur un Raspberry Pi. 
+Un "CatFeeder" en Squeak avec une image Docker pour déployer rapidement le projet sur un Raspberry Pi. 
 
 <p align="center">
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
@@ -14,7 +14,7 @@ Pour voir les différents PIN du GPIO sur le Raspberry :
 
     $ docker run --device /dev/gpiomem -p 9999:9999 -d adann0/squeak-catfeeder:latest
 
-L'interface web devrait être accessible à http://ip:9999. Une icone est visible pour donner à manger, et un live-stream pour vérifier que le bol ait bien été rempli. Un push button est aussi à disposition du chat pour qu'il remplisse le bol lui même (si il apprend a le faire).
+Le push button se branche sur le GPIO i et j. Le Servo sur le GPIO x, y et z.
 
 ## Le Bug du Crash de la VM
 
