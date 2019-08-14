@@ -40,6 +40,7 @@ Solution ? https://github.com/OpenSmalltalk/opensmalltalk-vm/releases/tag/r3732#
   - Raspberry Camera Live Stream : https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/
   - Squeak CheatSheet : https://wiki.squeak.org/squeak/5699
   - Squeak from Command Line : http://forum.world.st/Command-Line-Squeak-Scripting-Status-tp59746p59748.html
+  - Squeak vers Stdout : http://forum.world.st/Using-squeak-with-a-script-tp4935336p4935527.html
   - Questions/Recherches :
     - Accès GPIO via Docker (SOF) : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
     - Compatibilité GPIO-Squeak : 
