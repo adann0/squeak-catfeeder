@@ -24,6 +24,8 @@ Docker relance la VM si celle-ci plante, et comme feeder par le web n'est la que
 
 Voici une vidéo ou j'explique comment retrouver ce bug en partant de la VM backup du projet : (a faire)
 
+Solution ? https://github.com/OpenSmalltalk/opensmalltalk-vm/releases/tag/r3732#linux
+
 ## Plus de détails
 
 
