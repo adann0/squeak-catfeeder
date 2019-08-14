@@ -36,6 +36,7 @@ Voici une vidéo ou j'explique comment retrouver ce bug en partant de la VM back
   - Pharo-VNC-Supervisor : https://github.com/mumez/pharo-vnc-supervisor
   - Seaside Introduction : https://www.youtube.com/watch?v=9pdJxubR8yE&list=PLE08F4511BC5E3A91
   - Raspberry Camera Live Stream : https://tutorials-raspberrypi.com/raspberry-pi-security-camera-livestream-setup/
+  - Squeak CheatSheet : https://wiki.squeak.org/squeak/5699
   - Questions/Recherches :
     - Accès GPIO via Docker (SOF) : https://stackoverflow.com/questions/30059784/docker-access-to-raspberry-pi-gpio-pins
     - Compatibilité GPIO-Squeak : 
