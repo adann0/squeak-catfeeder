@@ -10,6 +10,6 @@ RUN wget http://abyz.me.uk/rpi/pigpio/pigpio.tar \
   && cd .. \
   && rm -rf PIGPIO
 
-COPY ./share /squeak/share
+RUN wget https://www28.zippyshare.com/d/DAhGpJDo/30596/catfeeder.zip
 
-EXPOSE 8080
+COPY ./catfeeder/share /squeak/share
