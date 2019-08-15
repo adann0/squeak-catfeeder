@@ -1,4 +1,4 @@
-FROM adann0/squeak-headless:latest
+FROM adann0/squeak-headless:armv7
 
 WORKDIR /tmp
 
