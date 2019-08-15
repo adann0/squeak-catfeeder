@@ -1,0 +1,1 @@
+sudo /home/pi/Squeak5.2-18229-32bit-201810190412-ARMv6/bin/squeak -headless /home/pi/Squeak5.2-18229-32bit-201810190412-ARMv6/shared/Squeak5.2-18229-32bit.image /home/pi/Squeak5.2-18229-32bit-201810190412-ARMv6/startup.st
