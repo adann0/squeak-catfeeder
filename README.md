@@ -12,9 +12,18 @@ Pour voir les différents PIN du GPIO sur le Raspberry :
 
 ## Docker Image
 
-    $ docker run --device /dev/gpiomem -p 9999:9999 -d adann0/squeak-catfeeder:latest
+    $ docker run --device /dev/gpiomem -d adann0/squeak-catfeeder:latest
 
 Le push button se branche sur le GPIO i et j. Le Servo sur le GPIO x, y et z.
+
+## Recréer l'image
+
+    $ git clone https://github.com/adann0/squeak-catfeeder.git &&
+    cd squeak-catfeeder &&
+    docker build . -f Dockerfile &&
+    
+
+
 
 ## Le Bug du Crash de la VM
 
