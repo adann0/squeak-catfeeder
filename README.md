@@ -1,6 +1,6 @@
 # squeak-catfeeder
 
-Un distributeur de croquette pour chat en Squeak avec une image Docker pour déployer rapidement le projet sur un Raspberry Pi. 
+Un distributeur de croquette pour chat en Squeak avec une image Docker pour déployer rapidement le projet sur un Raspberry Pi. Le chat appuie sur le bouton et les croquettes tombent.
 
 <p align="center">
   <img src="http://www.mars.dti.ne.jp/~umejava/images/sqlogo2.jpg">
